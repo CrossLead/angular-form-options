@@ -1,10 +1,12 @@
 {
   "name": "angular-form-options",
+  "version": "0.0.1",
   "description": "An angular directive that extends the functionality of angular forms.",
-  "main": "index.js",
+  "main": "src/app.js",
   "authors": [
     "Douglas Mason"
   ],
+  "private": true,
   "license": "ISC",
   "homepage": "https://github.com/CrossLead/angular-form-options",
   "ignore": [

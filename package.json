@@ -1,8 +1,8 @@
 {
   "name": "angular-form-options",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "An angular directive that extends the functionality of angular forms.",
-  "main": "index.js",
+  "main": "src/app.js",
   "scripts": {},
   "repository": {
     "type": "git",
