@@ -2,7 +2,7 @@
   "name": "angular-form-options",
   "version": "0.0.1",
   "description": "An angular directive that extends the functionality of angular forms.",
-  "main": "src/app.js",
+  "main": "dist/angular-form-options.js",
   "authors": [
     "Douglas Mason"
   ],
