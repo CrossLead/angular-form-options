@@ -6,7 +6,6 @@
   "authors": [
     "Douglas Mason"
   ],
-  "private": true,
   "license": "ISC",
   "homepage": "https://github.com/CrossLead/angular-form-options",
   "ignore": [
