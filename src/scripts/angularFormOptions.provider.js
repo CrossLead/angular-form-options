@@ -5,7 +5,8 @@
 
     /* Default Config Options */
     var config = {
-      scrollToAndFocusFirstErrorOnSubmit: true
+      scrollToAndFocusFirstErrorOnSubmit: true,
+      FORM_VALIDATION_EVENT: "FormValidated"
     };
 
     return {
