@@ -13,7 +13,7 @@
       }
 
       // Find first input field with the .ng-invalid class and scrolls to and focuses on it
-      var firstInvalid = elem[0].querySelector('input.ng-invalid');
+      var firstInvalid = elem[0].querySelector('.ng-invalid');
       if (firstInvalid && formCtrl.$invalid) {
         firstInvalid.focus();
       }
@@ -28,18 +28,27 @@
 
         return {
           pre: function (scope, el, attrs, formCtrl){
-            el.bind('submit', function (){
-
+            
+            var resolveConfigSettings = function(){
+              var customOptions = attrs.formOptions || '';
               // Allows options to be set on the controller or on $scope
               // Essentially allows for angular-form-options value to be set to "ctrl.options" or "options"
-              var scopeOptions = attrs.formOptions.split('.').reduce(function(obj, key){
-                return obj[key];
+              var scopeOptions = customOptions.split('.').reduce(function(obj, key){
+                return obj ? obj[key] : undefined;
               }, scope);
 
-              if(attrs.formOptions && scopeOptions){
+              if(scopeOptions){
                 config = angular.extend(angularFormOptions.config, scopeOptions);
               }
+            };
 
+            scope.$on(angularFormOptions.config.FORM_VALIDATION_EVENT, function (){
+              resolveConfigSettings();
+              scrollTo(el, formCtrl, config);
+            });
+
+            el.bind('submit', function (){
+              resolveConfigSettings();
               scrollTo(el, formCtrl, config);
             });
           }
@@ -59,7 +68,8 @@
 
     /* Default Config Options */
     var config = {
-      scrollToAndFocusFirstErrorOnSubmit: true
+      scrollToAndFocusFirstErrorOnSubmit: true,
+      FORM_VALIDATION_EVENT: "FormValidated"
     };
 
     return {
