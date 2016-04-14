@@ -28,6 +28,11 @@ angular.module('app', ['angularFormOptions']).
 #Default Configuration
 ```javascript
 {
-  scrollToAndFocusFirstErrorOnSubmit: true
+  scrollToAndFocusFirstErrorOnSubmit: true,
+  FORM_VALIDATION_EVENT: "FormValidated"
 }
 ```
+
+##Event Handling
+The ```scrollToAndFocusFirstErrorOnSubmit``` behavior is triggered when the form's submit event is fired, however, you may also trigger it by emitting the supplied ```FORM_VALIDATION_EVENT``` event.  
+>**Note:** You may also change this option via the configuration object.
