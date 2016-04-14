@@ -14,7 +14,7 @@
 
       // Find first input field with the .ng-invalid class and scrolls to and focuses on it
       var firstInvalid = elem[0].querySelector('.ng-invalid');
-      if (firstInvalid && formCtrl.$invalid) {
+      if (firstInvalid) {
         firstInvalid.focus();
       }
     };
