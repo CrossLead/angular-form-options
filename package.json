@@ -9,7 +9,7 @@
     "url": "git+https://github.com/CrossLead/angular-form-options.git"
   },
   "author": "Douglas Mason",
-  "license": "ISC",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/CrossLead/angular-form-options/issues"
   },
