@@ -1,5 +1,10 @@
 #form-options
 
+##Installation:
+```
+bower install angular-form-options
+```
+
 ##Usage:
 ```html
 <form form-options="customFormOptions"></form>
